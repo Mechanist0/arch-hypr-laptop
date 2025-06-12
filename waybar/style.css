@@ -1,0 +1,76 @@
+@import url("./color.css");
+
+* {
+    border: 2px;
+    border-radius: 2px;
+    font-family: FiraCode;
+    font-size: 11px;
+    min-height: 0px;
+}
+
+window#waybar {
+    padding-left: 5px;
+    padding-right: 5px;
+    background: @background-dark;
+    color: @foreground;
+    border-bottom: 2px solid @background;
+}
+
+#workspaces button {
+    padding: 10px 10px;
+    background: @background;
+    color: @foreground;
+}
+
+/* PulseAudio */
+#pulseaudio {
+    color: #00ff00;
+}
+#pulseaudio.muted {
+    color: #ff0000;
+}
+
+/* Battery */
+#battery.full {
+    color: #00ff00;
+}
+#battery.nominal {
+    color: #bcd100;
+}
+#battery.warning {
+    color: #d16c00;
+}
+#battery.critical {
+    color: red;
+}
+#battery.emergency {
+    color: #ff0000;
+}
+
+/* Bluetooth */
+#bluetooth.disabled {
+    color: orangered;
+}
+#bluetooth.off {
+    color: red;
+}
+#bluetooth.on {
+    color: skyblue;
+}
+#bluetooth.connected {
+    color: lightblue;
+}
+
+/* Temperature */
+#temperature.low {
+    color: aqua;
+}
+#temperature.med {
+    color: lightgreen;
+}
+#temperature.high {
+    color: orangered;
+}
+#temperature.critical {
+    color: mediumpurple;
+}
