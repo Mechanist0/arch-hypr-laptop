@@ -11,6 +11,8 @@
   "modules-center": [],
   "modules-right": [
     "custom/spacer-1",
+    "hyprland/submap",
+    "custom/spacer-1",
     "backlight",
     "custom/spacer-1",
     "pulseaudio",
@@ -30,9 +32,16 @@
     "custom/spacer-1",
     "clock",
   ],
+  "hyprland/submap": {
+    "format": " {} ",
+    "max-length": 8,
+    "tooltip": false,
+    "always-on": true,
+    "default-submap": "DEF",
+  },
   "backlight": {
     "format": " {percent}% {icon} ",
-    "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+    "format-icons": ["󰃜", "󰃛", "󰃚", "󰃞", "󰃝", "󰃟", "󰃠"],
   },
   "pulseaudio": {
     "format": " {volume}% {icon} ",
