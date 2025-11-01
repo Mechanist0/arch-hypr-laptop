@@ -115,13 +115,16 @@
     ],
   },
   "disk": {
-    "interval": 5,
-    "format": " {specific_free:0.2f}GB",
-    "unit": "GB",
+    "interval": 1,
+    "format": " Disk:{percentage_free}%",
+    "format-alt": "{specific_free}GiB Free\n{specific_used}GiB Used\n{specific_total}GiB Total",
+    "tooltip-format": " {percentage_free}% Remaining",
+    "unit": "GiB",
   },
   "memory": {
     "interval": 5,
-    "format": " {used:0.1f}GiB ",
+    "format": " Mem:{percentage}% ",
+    "format-alt": " {used}/{avail} \n {swapUsed}/{swapAvail} ",
     "states": {
       "warning": 80,
       "critical": 90,
