@@ -1,5 +1,6 @@
 {
-  "layer": "top",
+  "layer": "bottom",
+  "exclusive": true,
   "position": "top",
   "modules-left": [
     "hyprland/workspaces",
@@ -34,25 +35,35 @@
   ],
   "hyprland/submap": {
     "format": " {} ",
-    "max-length": 8,
+    "max-length": 10,
     "tooltip": false,
     "always-on": true,
     "default-submap": "DEF",
   },
   "backlight": {
     "format": " {percent}% {icon} ",
-    "format-icons": ["󰃜", "󰃛", "󰃚", "󰃞", "󰃝", "󰃟", "󰃠"],
+    "format-icons": [
+      "󰃞",
+      "󰃝",
+      "󰃟",
+      "󰃠"
+    ],
   },
   "pulseaudio": {
     "format": " {volume}% {icon} ",
     "format-muted": " {volume}% 󰸈 ",
     "on-click": "pactl -- set-sink-mute 0 toggle",
-    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "on-click-right": "pwvucontrol",
+    "format-icons": [
+      "󰕿",
+      "󰖀",
+      "󰕾"
+    ],
   },
   "bluetooth": {
     "format": " {status} ",
     "format-connected": " {device_alias}  ",
-    "format-connected-battery": " {device_alias} {device_battery_percentage}%  ",
+    "format-connected-battery": " {device_battery_percentage}%  ",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
@@ -61,13 +72,12 @@
   },
   "network": {
     "interval": 3,
-    "format": " {essid} ",
-    "format-ethernet": " {ifname} ",
-    "tooltip-format": "Strenght: {signalStrength}% --- Freq: {frequency}Ghz\n{bandwidthDownBits} Down --- {bandwidthUpBits} Up",
+    "format": " UP ",
+    "format-ethernet": " ETH-UP ",
+    "tooltip-format": "{essid}\nStrength: {signalStrength}% --- Freq: {frequency}Ghz\n{bandwidthDownBits} Down --- {bandwidthUpBits} Up",
   },
   "custom/vpn-toggle": {
     "exec": "~/.config/hypr/waybar/scripts/vpn-status.sh",
-    "on-click": "~/.config/hypr/waybar/scripts/vpn-toggle.sh",
     "restart-interval": 1,
   },
   "battery": {
@@ -82,7 +92,19 @@
       "critical": 10,
       "emergency": 5,
     },
-    "format-icons": ["󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱈑"],
+    "format-icons": [
+      "󱃍",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󱈑"
+    ],
   },
   "temperature": {
     "interval": 2,
@@ -91,14 +113,13 @@
       "/sys/class/hwmon/hwmon1/temp1",
       "/sys/class/hwmon/hwmon2/temp1",
     ],
-    "format": " {temperatureC}°C {icon} ",
+    "format": " {temperatureC}°C ",
     "states": {
       "low": 30,
       "med": 50,
       "high": 70,
       "critical": 90,
     },
-    "format-icons": ["󰸂", "󱃃", "󰔏", "󰸁"],
   },
   "cpu": {
     "interval": 2,
