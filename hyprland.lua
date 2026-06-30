@@ -294,7 +294,8 @@ hl.define_submap("RESET", function()
     hl.bind(mainMod .. " + SHIFT + C", hl.dsp.window.kill())
 
     -- Workspace Quick Switch
-    hl.bind("Alt_L + grave", hl.dsp.focus({ workspace = "e+1", monitor = "" }))
+    hl.bind("ALT + grave", hl.dsp.focus({ workspace = "e+1" }))
+    hl.bind("ALT + tab", hl.dsp.focus({ workspace = "e-1" }))
     hl.bind("ALT_L + S", hl.dsp.focus({ workspace = "special:magic" }))
 
     -- Command Submap
